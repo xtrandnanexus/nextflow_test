@@ -8,6 +8,8 @@ inputFile = Channel.fromPath(params.inputFile)
 workflow {
     main:
         modifyText(inputFile)
+    emit:
+        modifyText.out.txt
 }
 
 process modifyText {
@@ -16,7 +18,7 @@ process modifyText {
     input:
 	path inputFile
     output:
-	path "output.txt"
+	path "output.txt", emit: txt
     script:
 	"""
 	cat "${inputFile}" | tr '[:lower:]' '[:upper:]' > output.txt
