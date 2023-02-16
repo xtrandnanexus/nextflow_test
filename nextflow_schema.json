@@ -27,13 +27,5 @@
                 "outDir"
             ]
         }
-    },
-    "allOf": [
-        {
-            "$ref": "#/definitions/inputs"
-        }
-    ],
-    "required": [
-        "inputFile"
-    ]
+    }
 }
