@@ -18,7 +18,7 @@ process modifyText {
     output:
 	path "output.txt"
     script:
-    """
-    cat "${inputFile}" | tr '[:lower:]' '[:upper:]' > output.txt
-    """
+	"""
+	cat "${inputFile}" | tr '[:lower:]' '[:upper:]' > output.txt
+	"""
 }
