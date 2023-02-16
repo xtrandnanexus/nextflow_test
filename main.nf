@@ -1,5 +1,5 @@
-params.inputFile = '/Users/xtran@dnanexus.com/project_7_nextflow/input.txt'
-params.outputFile = 'output.txt'
+#!/usr/bin/env nextflow
+nextflow.enable.dsl=2 
 
 process modifyText {
     input:
