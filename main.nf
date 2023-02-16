@@ -1,11 +1,13 @@
 nextflow.enable.dsl=2 
 
 params.inputFile = ""
+params.outDir = ""
 
 inputFile = Channel.fromPath(params.inputFile)
 
 process modifyText {
     container = 'quay.io/nextflow/bash'
+    publishDir "${params.outDir}"
     input:
 	path inputFile
 
@@ -14,7 +16,7 @@ process modifyText {
 
     script:
     """
-    cat "${inputFile}" | tr '[:lower:]' '[:upper:]' > ouput.txt
+    cat "${inputFile}" | tr '[:lower:]' '[:upper:]' > output.txt
     """
 }
 
