@@ -1,6 +1,5 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/haplotypecaller/master/nextflow_schema.json",
     "title": "testing nextflow by a simple workflow",
     "description": "",
     "type": "object",
@@ -14,8 +13,7 @@
                "inputFile": {
                     "type": "string",
                     "format": "file-path",
-                    "mimetype": "text/plain",
-                    "pattern": "*.txt"
+                    "mimetype": "text/plain"
                 },
                 "outDir": {
                     "type": "string",
