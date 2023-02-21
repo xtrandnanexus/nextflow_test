@@ -1,6 +1,7 @@
 nextflow.enable.dsl=2 
 
 params.inputFile = ""
+params.outDir = ""
 
 inputFile = Channel.fromPath(params.inputFile)
 
@@ -13,6 +14,7 @@ workflow {
 
 process modifyText {
     container = "quay.io/nextflow/bash"
+    publishDir "${params.outDir}"
     input:
 	file inputFile
     output:
