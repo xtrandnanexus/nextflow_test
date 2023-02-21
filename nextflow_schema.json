@@ -11,7 +11,8 @@
             "default": "",
             "properties": {
                "inputFile": {
-                    "type": "file"
+                   "type": "string",
+                   "format": "file-path"
                 }
             },
             "required": [
