@@ -1,6 +1,8 @@
 nextflow.enable.dsl=2 
 
-inputFile = file(params.inputFile)
+params.inputFile = ""
+
+inputFile = Channel.fromPath(params.inputFile)
 
 workflow {
     main:
