@@ -13,10 +13,15 @@
                "inputFile": {
                    "type": "string",
                    "format": "file-path"
+                },
+                "outDir": {
+                    "type": "string",
+                    "format": "directory-path"
                 }
             },
             "required": [
-                "inputFile"
+                "inputFile",
+                "outDir"
             ]
         }
     }
